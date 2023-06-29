@@ -56,11 +56,11 @@ function App() {
     const handleSort = type => {
         const datas = [...studentList];
         const toSort = {
-            0: () => toSort[1](),
-            1: () => datas.sort((student, nextStudent) => student.studentName.localeCompare(nextStudent.studentName)),
-            2: () => datas.sort((student, nextStudent) => nextStudent.studentName.localeCompare(student.studentName)),
-            3: () => datas.sort((student, nextStudent) => averageScore(nextStudent) - averageScore(student)),
-            4: () => datas.sort((student, nextStudent) => averageScore(student) - averageScore(nextStudent))
+            default: () => toSort.nameAscending(),
+            nameAscending: () => datas.sort((student, nextStudent) => student.studentName.localeCompare(nextStudent.studentName)),
+            nameDecreasing: () => datas.sort((student, nextStudent) => nextStudent.studentName.localeCompare(student.studentName)),
+            scoreAscending: () => datas.sort((student, nextStudent) => averageScore(student) - averageScore(nextStudent)),
+            scoreDecreasing: () => datas.sort((student, nextStudent) => averageScore(nextStudent) - averageScore(student))
         };
         setStudentList(toSort[type]());
     };

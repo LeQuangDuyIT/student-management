@@ -2,7 +2,7 @@ import './StudentList.css';
 
 const StudentList = props => {
     const onChangeSortType = e => {
-        props.handleSort(+e.target.value);
+        props.handleSort(e.target.value);
     };
 
     const onOpenForm = () => {
@@ -16,11 +16,11 @@ const StudentList = props => {
                 <div>
                 <button onClick={onOpenForm}>Thêm học sinh</button>
                 <select name="table-sort" id="table-sort" onChange={onChangeSortType}>
-                    <option value="0">Sắp xếp</option>
-                    <option value="1">Tên: A - Z</option>
-                    <option value="2">Tên: Z - A</option>
-                    <option value="3">Điểm: Cao - Thấp</option>
-                    <option value="4">Điểm: Thấp - Cao</option>
+                    <option value="default">Sắp xếp</option>
+                    <option value="nameAscending">Tên: A - Z</option>
+                    <option value="nameDecreasing">Tên: Z - A</option>
+                    <option value="scoreAscending">Điểm: Thấp - Cao</option>
+                    <option value="scoreDecreasing">Điểm: Cao - Thấp</option>
                 </select>
                 </div>
             </div>
