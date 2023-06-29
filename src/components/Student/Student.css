@@ -1,0 +1,29 @@
+.student-row:nth-child(2n+1){
+    background: #F2F2F2;
+}
+.student-row:hover{
+    opacity: .7;
+}
+.setting-space button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+
+    color: white;
+}
+.setting-space button:hover{
+    transform: scale(1.05);
+    transition: .1s;
+}
+.setting-space button:first-child{
+    background: #6c757d;
+}
+.setting-space button:last-child{
+    margin-left: 5px;
+
+    background: #dc3545;
+}
+.setting-space button i{
+    line-height: 30px;
+}
